@@ -71,7 +71,7 @@ async function main() {
 
     for(let bp of breakpoints) {
         console.log(`@media screen and (${bp[2]}) {`);
-        console.log(buf.replace(/(\.[a-z0-9-]+)-ns {/g, "$1" + bp[1] + " {"));
+        console.log(buf.replace(/(\.[a-z0-9.\\/-]+)-ns {/g, "$1" + bp[1] + " {"));
     }
 }
 
